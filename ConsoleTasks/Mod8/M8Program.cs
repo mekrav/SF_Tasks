@@ -8,7 +8,19 @@ namespace ConsoleTasks.Mod8
     {
         static public void M8Main()
         {
-            GetCatalogs();
+            /* 8.2.1 - 8.2.3 
+            CountCatalogs();
+            AddFolder("D:\\SFtestFolder");
+            CountCatalogs();
+            DeleteFolder("D:\\SFtestFolder");
+            CountCatalogs();
+            */
+
+            /* 8.2.4 - не работает метод MoveToTrash
+            AddFolder("C:\\Users\\mibot.ru\\Desktop\\SFtestFolder");
+            Console.ReadKey();
+            MoveToTrash("C:\\Users\\mibot.ru\\Desktop\\SFtestFolder");
+            */
         }
 
         static void GetInfo()
@@ -47,6 +59,69 @@ namespace ConsoleTasks.Mod8
 
                 foreach (string s in files)   // Выведем их все
                     Console.WriteLine(s);
+            }
+        }
+
+        static void CountCatalogs()
+        {
+            string dirName = @"D:\\"; // Прописываем путь к директории Windows
+            if (Directory.Exists(dirName)) // Проверим, что директория существует
+            {
+                string[] dirs = Directory.GetDirectories(dirName);  // Получим все директории корневого каталога
+
+                Console.WriteLine("Папки: " + dirs.Length);
+
+                string[] files = Directory.GetFiles(dirName);// Получим все файлы корневого каталога
+                Console.WriteLine("Файлы: " + files.Length);
+
+                Console.WriteLine();
+            }
+        }
+
+        static void AddFolder(string Path)
+        {
+            try
+            {
+                DirectoryInfo NewDir = new DirectoryInfo(@Path);
+                if (!NewDir.Exists)
+                    NewDir.Create();
+                else
+                    throw new NullReferenceException("Такая папка уже есть");
+            }
+            catch(Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+        }
+
+        static void DeleteFolder(string Path)
+        {
+            try
+            {
+                DirectoryInfo NewDir = new DirectoryInfo(@Path);
+                if (NewDir.Exists)
+                    NewDir.Delete(true);
+                else
+                    throw new Exception("Такой папка нет");
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+        }
+
+        static void MoveToTrash(string Path) //Не работает, не корректный путь к корзине (спойлер, обычный Delete сваливает в корзину)
+        {
+            try
+            {
+                DirectoryInfo dir = new DirectoryInfo(@Path);
+                string Trash = "C:\\$Recycle.Bin";
+                if (dir.Exists && !Directory.Exists(Trash))
+                    dir.MoveTo(Trash);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
             }
         }
     }
