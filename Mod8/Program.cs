@@ -1,10 +1,11 @@
 ﻿using System;
 using System.IO;
 using System.Text;
+using System.Globalization;
 
-namespace ConsoleTasks.Mod8
+namespace Mod8
 {
-    internal static class M8Program
+    internal static class Program
     {
         static public void M8Main()
         {
@@ -20,6 +21,15 @@ namespace ConsoleTasks.Mod8
             AddFolder("C:\\Users\\mibot.ru\\Desktop\\SFtestFolder");
             Console.ReadKey();
             MoveToTrash("C:\\Users\\mibot.ru\\Desktop\\SFtestFolder");
+            */
+
+            // Не 8,3,1, но то как я его первоначально поняла) ShowMe();
+
+            // AddLounchData();
+
+            /*
+            WriterBin();
+            ReadBin();
             */
         }
 
@@ -88,7 +98,7 @@ namespace ConsoleTasks.Mod8
                 else
                     throw new NullReferenceException("Такая папка уже есть");
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 Console.WriteLine(ex.Message);
             }
@@ -124,6 +134,47 @@ namespace ConsoleTasks.Mod8
                 Console.WriteLine(ex.Message);
             }
         }
+
+        //Да здравствуют квайны)
+        static void ShowMe()
+        {
+            string s = "static void ShowMe() {{ string s={0}{1}{0}; System.Console.Write(s,(char)34,s); }}";
+            System.Console.Write(s, (char)34, s);
+        }
+
+        static void AddLounchData()
+        {
+            FileInfo CurrentFile = new FileInfo(@"D:\SkillFactory\Tasks\ConsoleTasks\Mod8\M8Program.cs");
+            DateTime LocalDate = DateTime.Now;
+            var culture = new CultureInfo("ru-RU");
+            using (StreamWriter sw = CurrentFile.AppendText())
+            {
+                sw.WriteLine(@"//" + LocalDate.ToString(culture));
+            }
+        }
+
+        static void ReadBin()
+        {
+            string StringValue = "?";
+            string FileName = @"C:\Users\mibot.ru\Desktop\BinaryFile.bin";
+            if (File.Exists(FileName))
+            {
+                using (BinaryReader reader = new BinaryReader(File.Open(FileName, FileMode.Open)))
+                {
+                    StringValue = reader.ReadString();
+                }
+            }
+            Console.WriteLine(StringValue);
+        }
+
+        public static void WriterBin()
+        {
+            string FileName = @"C:\Users\mibot.ru\Desktop\BinaryFile.bin";
+            using (BinaryWriter writer = new BinaryWriter(File.Open(FileName, FileMode.Open)))
+                writer.Write($"Файл изменен {DateTime.Now} на компьютере c ОС {Environment.OSVersion}");
+
+        }
     }
 }
+//20.05.2022 23:19:01
 
