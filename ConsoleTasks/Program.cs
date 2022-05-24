@@ -6,7 +6,6 @@ namespace ConsoleTasks
     {
         static void Main(string[] args)
         {
-            Mod8.M8Program.M8Main();
         }
     }
 }
