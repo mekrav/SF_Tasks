@@ -15,15 +15,15 @@ namespace Mod8
 
             // Запуск первого задания
             // Сигнатура метода: Run(string FolderPath, int MinNotUsed)
-            // Task1.Run("C:\\Users\\mibot.ru\\Desktop\\TestFolde", 30);
+            // Task1.Run("C:\\path", 30);
 
             // Запуск второго задания
             // Сигнатура метода: Run(string FolderPath)
-            // Task2.Run(@"D:\\SkillFactory");
+            // Task2.Run(@"D:\\path");
 
             // Запуск второго задания
             // Сигнатура метода: Run(string FolderPath, int MinNotUsed)
-            Task3.Run("C:\\Users\\mibot.ru\\Desktop\\TestFolde", 3);
+            // Task3.Run("C:\\path", 3);
         }
     }
 }
