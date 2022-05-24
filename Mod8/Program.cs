@@ -7,7 +7,7 @@ namespace Mod8
 {
     internal static class Program
     {
-        static public void M8Main()
+        static public void Main(string[] args)
         {
             /* 8.2.1 - 8.2.3 
             CountCatalogs();
@@ -31,6 +31,17 @@ namespace Mod8
             WriterBin();
             ReadBin();
             */
+
+            // Метод рекурсивный, поэтому считаю что его нужно оборачивать в try{}catch{} 
+            // Сигнатура метода: DeleteOldFiles(string FolderPath, int MinNotUsed)
+            try
+            {
+                Task1.DeleteOldFiles("C:\\Users\\mibot.ru\\Desktop\\TestFolde", 30);
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine($"Ошибка: {e}");
+            }
         }
 
         static void GetInfo()
@@ -177,4 +188,3 @@ namespace Mod8
     }
 }
 //20.05.2022 23:19:01
-
