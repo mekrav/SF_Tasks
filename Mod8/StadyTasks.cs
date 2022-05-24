@@ -1,21 +1,37 @@
 ﻿using System;
-using System.IO;
+using System.Collections.Generic;
 using System.Text;
+using System.IO;
 using System.Globalization;
 
 namespace Mod8
 {
-    internal static class Program
+    internal static class StadyTasks
     {
-        static public void Main(string[] args)
+        public static void Run()
         {
-            // Запуск учебных заданий 
-            // Disclaimer: перед запуском нужно раскомментировать необходимые пункты
-            // StadyTasks.Run();
+            /* 8.2.1 - 8.2.3 
+            CountCatalogs();
+            AddFolder("D:\\SFtestFolder");
+            CountCatalogs();
+            DeleteFolder("D:\\SFtestFolder");
+            CountCatalogs();
+            */
 
-            // Запуск первого задания
-            // Сигнатура метода: Run(string FolderPath, int MinNotUsed)
-            Task1.Run("C:\\Users\\mibot.ru\\Desktop\\TestFolde", 30);
+            /* 8.2.4 - не работает метод MoveToTrash
+            AddFolder("C:\\Users\\mibot.ru\\Desktop\\SFtestFolder");
+            Console.ReadKey();
+            MoveToTrash("C:\\Users\\mibot.ru\\Desktop\\SFtestFolder");
+            */
+
+            // Не 8,3,1, но то как я его первоначально поняла) ShowMe();
+
+            // AddLounchData();
+
+            /*
+            WriterBin();
+            ReadBin();
+            */
         }
 
         static void GetInfo()
@@ -161,4 +177,4 @@ namespace Mod8
         }
     }
 }
-//20.05.2022 23:19:01
+
