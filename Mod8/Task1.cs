@@ -46,8 +46,6 @@ namespace Mod8
                     }
                 }
 
-                Console.WriteLine();
-
                 string[] files = Directory.GetFiles(FolderPath);
                 foreach (string f in files)
                 {
