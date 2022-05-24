@@ -19,7 +19,11 @@ namespace Mod8
 
             // Запуск второго задания
             // Сигнатура метода: Run(string FolderPath)
-            Task2.Run(@"D:\\SkillFactory");
+            // Task2.Run(@"D:\\SkillFactory");
+
+            // Запуск второго задания
+            // Сигнатура метода: Run(string FolderPath, int MinNotUsed)
+            Task3.Run("C:\\Users\\mibot.ru\\Desktop\\TestFolde", 3);
         }
     }
 }
