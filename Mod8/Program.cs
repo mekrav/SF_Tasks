@@ -32,16 +32,8 @@ namespace Mod8
             ReadBin();
             */
 
-            // Метод рекурсивный, поэтому считаю что его нужно оборачивать в try{}catch{} 
-            // Сигнатура метода: DeleteOldFiles(string FolderPath, int MinNotUsed)
-            try
-            {
-                Task1.DeleteOldFiles("C:\\Users\\mibot.ru\\Desktop\\TestFolde", 30);
-            }
-            catch (Exception e)
-            {
-                Console.WriteLine($"Ошибка: {e}");
-            }
+            // Сигнатура метода: Run(string FolderPath, int MinNotUsed)
+            Task1.Run("C:\\Users\\mibot.ru\\Desktop\\TestFolde", 30);
         }
 
         static void GetInfo()

@@ -7,7 +7,21 @@ namespace Mod8
 {
     internal static class Task1
     {
-        public static void DeleteOldFiles(string FolderPath, int MinNotUsed)
+        public static void Run (string FolderPath, int MinNotUsed)
+        {
+            // Метод рекурсивный, поэтому считаю что его нужно оборачивать в try{}catch{} 
+            // Сигнатура метода: DeleteOldFiles(string FolderPath, int MinNotUsed)
+            try
+            {
+                DeleteOldFiles(FolderPath, MinNotUsed);
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine($"Ошибка: {e}");
+            }
+        }
+
+        static void DeleteOldFiles(string FolderPath, int MinNotUsed)
         {
             if (Directory.Exists(FolderPath))
             {
