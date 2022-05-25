@@ -21,9 +21,12 @@ namespace Mod8
             // Сигнатура метода: Run(string FolderPath)
             // Task2.Run(@"D:\\path");
 
-            // Запуск второго задания
+            // Запуск третьего задания
             // Сигнатура метода: Run(string FolderPath, int MinNotUsed)
             // Task3.Run("C:\\path", 3);
+
+            // Запуск четвёртого задания
+            Task4.Run();
         }
     }
 }
