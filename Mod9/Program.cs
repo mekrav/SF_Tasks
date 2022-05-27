@@ -6,7 +6,8 @@ namespace Mod9
     {
         static void Main(string[] args)
         {
-            StadyTasks.Run();
+            //StadyTasks.Run();
+            Task1.Run();
         }
     }
 }
