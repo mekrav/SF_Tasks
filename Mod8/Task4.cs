@@ -80,7 +80,7 @@ namespace Mod8
                 DirectoryInfo StudentsDir = new DirectoryInfo(RootFolder + @"\\Students");
                 if (!StudentsDir.Exists)
                     StudentsDir.Create();
-                foreach(Student student in ListOfStudents)
+                foreach (Student student in ListOfStudents)
                 {
                     string GroupFilePath = StudentsDir + @"\\" + student.Group + ".txt";
                     FileInfo GroupFile = new FileInfo(GroupFilePath);
