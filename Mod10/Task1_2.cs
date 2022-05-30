@@ -4,10 +4,12 @@ using System.Text;
 
 namespace Mod10
 {
-    internal class Task1
+    internal class Task1_2
     {
+        static ILogger Logger { get; set; }
         public static void Run()
         {
+            Logger = new Logger();
             bool p = true;
             while (p)
             {
@@ -16,17 +18,17 @@ namespace Mod10
                     Console.WriteLine("Введите 2 числа, которые хотите спросить");
                     double a = Convert.ToInt32(Console.ReadLine());
                     double b = Convert.ToInt32(Console.ReadLine());
-                    Calculator calculator = new Calculator();
+                    Calculator calculator = new Calculator(Logger);
                     Console.WriteLine(calculator.CalculateSum(a, b));
                     p = false;
                 }
                 catch (FormatException)
                 {
-                    Console.WriteLine("Слагаемое введено не корректно");
+                    Logger.Error("Слагаемое введено не верно");
                 }
                 catch(Exception ex)
                 {
-                    Console.WriteLine(ex.Message);
+                    Logger.Error(ex.Message);
                 }
             }
         }
