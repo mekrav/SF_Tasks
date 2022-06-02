@@ -363,3 +363,4 @@ MigrationBackup/
 FodyWeavers.xsd
 *.csproj
 *.sln
+/TelegramBotSF/BotCredentials.cs
