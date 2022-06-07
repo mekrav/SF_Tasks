@@ -9,28 +9,24 @@ namespace TelegramBotSF
 {
     internal class Program
     {
-        // Так не надо
-        static ITelegramBotClient botClient;
         static void Main()
         {
-            botClient = new TelegramBotClient(BotCredentials.BotToken);
-            botClient.OnMessage += Bot_OnMessage;
-            botClient.StartReceiving();
+            BotWorker worker = new BotWorker();
+            worker.Initialize();
+            worker.Stat();
 
             Console.WriteLine("Нажмите любую кнопку для остановки");
-            Console.WriteLine("Hello World!");
-            Console.ReadKey();
-        }
 
-        static async void Bot_OnMessage(object sender, MessageEventArgs e)
-        {
-            if (e.Message.Text != null)
+            string command;
+            do
             {
-                Console.WriteLine("Получено сообщение в чате: " + e.Message.Chat.Id + ".");
+                command = Console.ReadLine();
 
-                await botClient.SendTextMessageAsync(
-                chatId: e.Message.Chat, text: "Вы написали:\n" + e.Message.Text);
-            }
+            } while (command != "stop");
+
+            worker.Stop();
         }
+
+        
     }
 }
