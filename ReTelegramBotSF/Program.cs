@@ -22,7 +22,7 @@ namespace ReTelegramBotSF
         static void ConfigureServices(IServiceCollection services)
         {
             // Регистрируем объект TelegramBotClient c токеном подключения
-            services.AddSingleton<ITelegramBotClient>(provider => new TelegramBotClient("5463225518:AAHsZLRjR_JFj23g34Lsqhn0NS_sSwmFmwY"));
+            services.AddSingleton<ITelegramBotClient>(provider => new TelegramBotClient("Oops"));
             // Регистрируем постоянно активный сервис бота
             services.AddHostedService<Bot>();
         }
