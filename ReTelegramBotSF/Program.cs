@@ -4,6 +4,8 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.DependencyInjection;
 using Telegram.Bot;
 using ReTelegramBotSF.Controllers;
+using ReTelegramBotSF.Services;
+using ReTelegramBotSF.Config;
 
 namespace ReTelegramBotSF
 {
@@ -22,14 +24,27 @@ namespace ReTelegramBotSF
         }
         static void ConfigureServices(IServiceCollection services)
         {
+            AppSettings appSettings = BuildAppSettings();
+            services.AddSingleton(BuildAppSettings());
+
+            services.AddSingleton<IStorage, MemoryStorage>();
+
             services.AddTransient<DefaultMessageController>();
             services.AddTransient<VoiceMessageController>();
             services.AddTransient<TextMessageController>();
             services.AddTransient<InlineKeyboardController>();
             // Регистрируем объект TelegramBotClient c токеном подключения
-            services.AddSingleton<ITelegramBotClient>(provider => new TelegramBotClient(BotCredentials.BotToken));
+            services.AddSingleton<ITelegramBotClient>(provider => new TelegramBotClient(appSettings.BotToken));
             // Регистрируем постоянно активный сервис бота
             services.AddHostedService<Bot>();
+        }
+
+        static AppSettings BuildAppSettings()
+        {
+            return new AppSettings()
+            {
+                BotToken = BotCredentials.BotToken
+            };
         }
     }
 }
