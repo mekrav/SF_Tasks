@@ -365,3 +365,5 @@ FodyWeavers.xsd
 *.sln
 /TelegramBotSF/BotCredentials.cs
 /ReTelegramBotSF/BotCredentials.cs
+/FFmpeg-win64
+/Speech-models
