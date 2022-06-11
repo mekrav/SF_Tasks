@@ -56,7 +56,7 @@ namespace ReTelegramBotSF
             // Обрабатываем входящие сообщения из Telegram Bot API: https://core.telegram.org/bots/api#message
             if (update.Type == UpdateType.Message)
             {
-                switch (update.Message!.Type) //Why7 Why7
+                switch (update.Message!.Type) //Why? Why?
                 {
                     case MessageType.Voice:
                         await _voiceMessageController.Handle(update.Message, cancellationToken);

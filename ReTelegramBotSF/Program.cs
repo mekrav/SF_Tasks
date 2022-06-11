@@ -33,6 +33,7 @@ namespace ReTelegramBotSF
             services.AddTransient<VoiceMessageController>();
             services.AddTransient<TextMessageController>();
             services.AddTransient<InlineKeyboardController>();
+            services.AddSingleton<IFileHandler, AudioFileHandler>();
             // Регистрируем объект TelegramBotClient c токеном подключения
             services.AddSingleton<ITelegramBotClient>(provider => new TelegramBotClient(appSettings.BotToken));
             // Регистрируем постоянно активный сервис бота
@@ -43,7 +44,11 @@ namespace ReTelegramBotSF
         {
             return new AppSettings()
             {
-                BotToken = BotCredentials.BotToken
+                DownloadsFolder = "D:\\SkillFactory\\Downloads\\AudioBot",
+                BotToken = BotCredentials.BotToken,
+                AudioFileName = "audio",
+                InputAudioFormat = "ogg",
+                OutputAudioFormat = "wav"
             };
         }
     }
