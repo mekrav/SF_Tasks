@@ -368,3 +368,4 @@ FodyWeavers.xsd
 /FFmpeg-win64
 /Speech-models
 /FinTelegramBotSF/BotCredentials.cs
+/FinTelegramBotSF/Config/BotCredentials.cs
