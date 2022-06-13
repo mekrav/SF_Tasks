@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2022-06-13T07:49:27.943Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.67 Safari/537.36 OPR/87.0.4390.45" etag="mMw0yJpO71q_C6kzP0s0" version="20.0.0" type="github">
+<mxfile host="app.diagrams.net" modified="2022-06-13T07:58:58.075Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.67 Safari/537.36 OPR/87.0.4390.45" etag="wo90dNwoZPEKXRlTIJCz" version="20.0.0" type="github">
   <diagram id="CvrFjIaBDY-rj21-8ONs" name="Page-1">
     <mxGraphModel dx="638" dy="343" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -17,7 +17,7 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="PStwLlvbTXWm-3K51m2D-8" value="Считаю что список студентов UserList нам уже предоставлен" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
-          <mxGeometry x="230" y="100" width="180" height="40" as="geometry" />
+          <mxGeometry x="260" y="100" width="180" height="40" as="geometry" />
         </mxCell>
         <mxCell id="PStwLlvbTXWm-3K51m2D-9" value="Вывести: &lt;br&gt;&quot;Здравствуйте, &quot; &lt;br&gt;+ user.Name" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;fontSize=10;" vertex="1" parent="1">
           <mxGeometry x="110" y="160" width="120" height="40" as="geometry" />
@@ -59,25 +59,28 @@
         <mxCell id="PStwLlvbTXWm-3K51m2D-23" value="" style="endArrow=none;html=1;rounded=0;fontSize=10;edgeStyle=orthogonalEdgeStyle;" edge="1" parent="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
             <mxPoint x="220" y="360" as="sourcePoint" />
-            <mxPoint x="40" y="180" as="targetPoint" />
+            <mxPoint x="40" y="120" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="PStwLlvbTXWm-3K51m2D-24" value="" style="endArrow=classic;html=1;rounded=0;fontSize=10;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" target="PStwLlvbTXWm-3K51m2D-9">
+        <mxCell id="PStwLlvbTXWm-3K51m2D-24" value="" style="endArrow=classic;html=1;rounded=0;fontSize=10;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" target="PStwLlvbTXWm-3K51m2D-5">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="40" y="180" as="sourcePoint" />
+            <mxPoint x="40" y="120" as="sourcePoint" />
             <mxPoint x="250" y="230" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="80" y="120" />
+            </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="PStwLlvbTXWm-3K51m2D-25" value="" style="endArrow=none;html=1;rounded=0;fontSize=10;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" target="PStwLlvbTXWm-3K51m2D-9">
+        <mxCell id="PStwLlvbTXWm-3K51m2D-25" value="" style="endArrow=none;html=1;rounded=0;fontSize=10;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" target="PStwLlvbTXWm-3K51m2D-5">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="250" y="180" as="sourcePoint" />
+            <mxPoint x="250" y="120" as="sourcePoint" />
             <mxPoint x="280" y="260" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="PStwLlvbTXWm-3K51m2D-27" value="" style="endArrow=none;html=1;rounded=0;fontSize=10;" edge="1" parent="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
             <mxPoint x="250" y="370" as="sourcePoint" />
-            <mxPoint x="250" y="180" as="targetPoint" />
+            <mxPoint x="250" y="120" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="PStwLlvbTXWm-3K51m2D-28" value="" style="endArrow=classic;html=1;rounded=0;fontSize=10;edgeStyle=orthogonalEdgeStyle;" edge="1" parent="1">
