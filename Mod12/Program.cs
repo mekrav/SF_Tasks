@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Threading;
+using BenchmarkDotNet.Running;
 
 namespace Mod12
 {
@@ -7,6 +8,7 @@ namespace Mod12
     {
         static void Main(string[] args)
         {
+            /*
             var users = User.ParseArgs(args);
             // Начало
             foreach(var user in users)
@@ -18,7 +20,8 @@ namespace Mod12
                 }
             }
             //Конец
-
+            */
+            var summary = BenchmarkRunner.Run<Testing>();
         }
         static void ShowAds()
         {
