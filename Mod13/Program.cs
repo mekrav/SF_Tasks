@@ -24,7 +24,7 @@ namespace Mod13
             */
 
             //Залание 2. Считает Top N слов, передать N и путь до файла.
-            int position = 20;
+            int position = 10;
             string path = "D:\\bup.txt";
             FinalTask2.Run(position, path);            
         }

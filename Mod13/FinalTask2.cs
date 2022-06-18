@@ -18,7 +18,7 @@ namespace Mod13
                 Console.WriteLine(word);
             }
         }
-        public static Dictionary<string,int> GetContent(string[] words)
+        static Dictionary<string,int> GetContent(string[] words)
         {
             Dictionary<string,int> wordsCount = new Dictionary<string,int>();
             foreach (string word in words)
@@ -35,7 +35,7 @@ namespace Mod13
             }
             return wordsCount;
         }
-        public static string[] WordsExtracter(string path)
+        static string[] WordsExtracter(string path)
         {
             string text;
             if (File.Exists(path))
@@ -48,7 +48,7 @@ namespace Mod13
             }
             return null;
         }
-        public static LinkedList<(string, int)> Top(Dictionary<string,int> dataSet, int position)
+        static LinkedList<(string, int)> Top(Dictionary<string,int> dataSet, int position)
         {
             if (dataSet == null)
                 return null;
