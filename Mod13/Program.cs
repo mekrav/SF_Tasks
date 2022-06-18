@@ -22,6 +22,11 @@ namespace Mod13
 
             Console.WriteLine(symbols.Count);
             */
+
+            //Залание 2. Считает Top N слов, передать N и путь до файла.
+            int position = 20;
+            string path = "D:\\bup.txt";
+            FinalTask2.Run(position, path);            
         }
     }
 }
