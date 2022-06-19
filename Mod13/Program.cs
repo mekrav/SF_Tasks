@@ -23,10 +23,14 @@ namespace Mod13
             Console.WriteLine(symbols.Count);
             */
 
-            //Залание 2. Считает Top N слов, передать N и путь до файла.
+            /*//Задание 2. Считает Top N слов, передать N и путь до файла.
             int position = 10;
+            string path = "D:\\SkillFactory\\cdev_Text.txt";
+            FinalTask2.Run(position, path);
+            */
+            //Задание 1. Сравнение вставки в List и LinkedList
             string path = "D:\\bup.txt";
-            FinalTask2.Run(position, path);            
+            FinalTask1.Run(path);
         }
     }
 }
