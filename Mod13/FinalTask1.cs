@@ -20,7 +20,7 @@ namespace Mod13
             //считаем среднее за 100 запусков
             long allListTicks = 0;
             long allLinkedListTicks = 0;
-            for(int i = 0; i < 100; i++)
+            for (int i = 0; i < 100; i++)
             {
                 allListTicks += InsertTimingList(wordList);
                 allLinkedListTicks += InsertTimingLinkedList(wordLinkedList);
@@ -29,9 +29,8 @@ namespace Mod13
             double avgLinkedListTicks = allLinkedListTicks / 100;
             Console.WriteLine($"List: {avgListTicks}\nLinkedList: {avgLinkedListTicks}");
             //Мы не получаем исчерпывающую информацию о времени вставки элементов
-            //Но мы понимаем, что вставка элементов в LinkedList проискодит в десятки раз быстрее
+            //Но мы понимаем, что вставка элементов в LinkedList проискодит в десятки раз быстрее, чем         }
         }
-
         static string[] WordsExtracter(string path)
         {
             string text;
