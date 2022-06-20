@@ -9,7 +9,7 @@ namespace Mod14
         static void Main(string[] args)
         {
             //Запуск учебных задач
-            StudyTask.Run();
+            FinalTask.Run();
         }
     }
 }
