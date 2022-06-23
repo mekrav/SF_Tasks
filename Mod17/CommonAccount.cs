@@ -12,7 +12,7 @@ namespace Mod17
         public double Balance { get; set; }
 
         // процентная ставка
-        public double Interest { get; set; }
+        public double Interest { get; private set; }
 
         public void CalculateInterest()
         {
