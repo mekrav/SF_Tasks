@@ -7,8 +7,12 @@ namespace Mod17
     internal class Calculator
     {
         // Метод для расчета процентной ставки
+        // Больше не нужен
+        /*
         public static void CalculateInterest(Account account)
         {
+
+            
             if (account.Type == "Обычный")
             {
                 // расчет процентной ставки обычного аккаунта по правилам банка
@@ -25,6 +29,7 @@ namespace Mod17
                 // расчет процентной ставк зарплатного аккаунта по правилам банка
                 account.Interest = account.Balance * 0.5;
             }
+        */
         }
     }
 }
