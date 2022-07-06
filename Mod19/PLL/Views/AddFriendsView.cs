@@ -33,7 +33,7 @@ namespace Mod19.PLL.Views
             }
             catch (UserNotFoundException)
             {
-                AlertMessage.Show("Ьакого пользователя нет");
+                AlertMessage.Show("Пользователя c этим почтовым адресом не найдено");
             }
             catch (Exception ex)
             {
