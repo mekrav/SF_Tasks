@@ -11,7 +11,7 @@ using System.Text;
 
 namespace Mod19.BLL.Services
 {
-    internal class FriendService
+    public class FriendService
     {
         IFriendRepository friendRepository;
         IUserRepository userRepository;
@@ -24,6 +24,21 @@ namespace Mod19.BLL.Services
             userService = new UserService();
         }
 
+        /*
+        //Упс, оказывается нам не нужно выводить список друзей
+        //Убирать не буду, ибо просмотр списка друзей возможно потребуется в будущем
+        public IEnumerable<User> GetFriendListByUserId(int userId)
+        {
+            var friends = new List<User>();
+
+            friendRepository.FindAllByUserId(userId).ToList().ForEach(m =>
+            {
+                friends.Add(userService.FindById(m.friend_id));
+            });
+
+            return friends;
+        }
+        */
         public void AddNewFriend(FriendAddingData friendAddingData)
         {
             if (!new EmailAddressAttribute().IsValid(friendAddingData.FriendEmail))
