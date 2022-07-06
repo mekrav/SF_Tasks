@@ -1,4 +1,5 @@
-﻿using Mod19.BLL.Models;
+﻿using Mod19.BLL.Exceptions;
+using Mod19.BLL.Models;
 using Mod19.BLL.Services;
 using Mod19.PLL.Helpers;
 using System;
@@ -26,9 +27,17 @@ namespace Mod19.PLL.Views
                 friendService.AddNewFriend(friendAddingData);
                 SuccessMessage.Show("Новый друг успешно добавлен!");
             }
-            catch
+            catch(ArgumentNullException)
             {
-
+                AlertMessage.Show("E-mail введён неверно");
+            }
+            catch (UserNotFoundException)
+            {
+                AlertMessage.Show("Ьакого пользователя нет");
+            }
+            catch (Exception ex)
+            {
+                AlertMessage.Show(ex.Message);
             }
         }
     }
